@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/qrcode.js"></script>
+<link rel="stylesheet" href="gen.css">
+</head>
+
+<body>
+	<center>
+	<img src="vit_white.png" alt="">
+<form onsubmit="generate();return false;">
+	<h1>Enter the class code for the day followed by date </h1>
+	<input type="text" id="qr" name="qrcode">
+	
+	<button type="submit" class="btn btn-primary">Submit</button>
+	
+</form>
+<br>
+<div id="qrResult">
+</center>
+</div>
+
+<script type="text/javascript">
+	var qrcode=new QRCode(document.getElementById('qrResult'),{
+		width:400,
+		height:500
+	});
+
+function generate(){
+	var message=document.getElementById('qr');
+	if(!message.value){
+		alert("Input a text");
+		message.focus();
+		return;
+	}
+
+	qrcode.makeCode(message.value);
+}
+
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gen.css">
+</head>
+
+<body>
+    <center>
+        <img src="vit_white.png" alt="">
+        <input type="file" id="file" name="file">
+        <p>Qr Content: <span id="content"></span></p>
+        <form class="box" action="add.php" method="POST" >
+              <input type="text" name="register_number" id="username" placeholder="Register No." required> <!--id used in css page-->
+              <input type="text" name="qrcode" placeholder="username" >
+              <input type="submit" id="submit" value="Proceed ">
+            </form>
+    </center>
+    <!--To Read QR Code-->
+    <script type="text/javascript" src="js/qrReader.js"></script>
+
+</body>
+
+</html>
